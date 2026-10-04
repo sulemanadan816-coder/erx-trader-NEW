@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Poppins', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --base-gold: #cba352;
+    --base-gold-hover: #dfb867;
+    --base-gold-glow: rgba(203, 163, 82, 0.35);
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    max-width: 100vw;
+    background-color: #080c14;
+    color: #e2e8f0;
+  }
+
+  h1, h2, h3, h4, .balance-text {
+    text-wrap: balance;
+  }
+
+  .font-mono,
+  .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* TrustZone stage background & glowing ambient effects */
+.tz-bg-stage {
+  position: relative;
+  background-color: #080c14;
+  overflow: hidden;
+}
+
+.tz-stage-blob-1 {
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(203, 163, 82, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.tz-stage-blob-2 {
+  position: absolute;
+  top: 30%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.tz-stage-blob-3 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+/* Floating crypto coins */
+@keyframes tz-float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(6deg);
+  }
+}
+
+@keyframes tz-float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-6deg);
+  }
+}
+
+.tz-coin {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 18px;
+  color: #f8e7a1;
+  background: linear-gradient(135deg, #f8e7a1 0%, #cba352 50%, #8c6a25 100%);
+  box-shadow: 0 4px 20px rgba(203, 163, 82, 0.35);
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.tz-coin-1 {
+  top: 12%;
+  left: 6%;
+  animation: tz-float-slow 6s ease-in-out infinite;
+}
+
+.tz-coin-2 {
+  top: 25%;
+  right: 8%;
+  animation: tz-float-reverse 7s ease-in-out infinite;
+}
+
+.tz-coin-3 {
+  bottom: 20%;
+  left: 12%;
+  animation: tz-float-slow 8s ease-in-out infinite 1s;
+}
+
+.tz-coin-4 {
+  bottom: 15%;
+  right: 15%;
+  animation: tz-float-reverse 6.5s ease-in-out infinite 0.5s;
+}
+
+/* TrustZone Plan Card */
+.np-plan-card {
+  position: relative;
+  background: rgba(13, 19, 34, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(203, 163, 82, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.np-plan-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(203, 163, 82, 0.6);
+  box-shadow: 0 12px 30px rgba(203, 163, 82, 0.18);
+}
+
+.np-plan-tab-top {
+  display: inline-block;
+  padding: 6px 20px;
+  background: linear-gradient(135deg, #cba352, #9d7529);
+  color: #0b0f19;
+  font-weight: 700;
+  font-size: 13px;
+  border-top-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Gold Gradient Buttons */
+.btn-gold {
+  background: linear-gradient(135deg, #f8e7a1 0%, #cba352 50%, #b88d37 100%);
+  color: #0b0f19;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 16px rgba(203, 163, 82, 0.25);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #fff 0%, #dfb867 50%, #cba352 100%);
+  box-shadow: 0 6px 22px rgba(203, 163, 82, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-gold-ghost {
+  background: transparent;
+  color: #cba352;
+  border: 1px solid #cba352;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-gold-ghost:hover {
+  background: rgba(203, 163, 82, 0.12);
+  border-color: #dfb867;
+  color: #dfb867;
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+

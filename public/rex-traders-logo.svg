@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="REX TRADERS Official Logo">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#046355" />
+      <stop offset="50%" stop-color="#035347" />
+      <stop offset="100%" stop-color="#023e35" />
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ff5b8" />
+      <stop offset="55%" stop-color="#00d28f" />
+      <stop offset="100%" stop-color="#009e6c" />
+    </linearGradient>
+    <linearGradient id="whiteMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#eef5f3" />
+      <stop offset="100%" stop-color="#cbdcd7" />
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#001f1a" flood-opacity="0.55" />
+    </filter>
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#22f5ab" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Outer Frame & Deep Teal Background -->
+  <rect width="512" height="512" rx="36" fill="url(#bgGrad)" />
+  <rect x="8" y="8" width="496" height="496" rx="30" fill="none" stroke="#36e2a4" stroke-width="3" stroke-opacity="0.65" />
+
+  <!-- Top White Emblem Circle with Dollar Sign -->
+  <g filter="url(#emeraldGlow)">
+    <circle cx="256" cy="128" r="78" fill="url(#whiteMetal)" />
+    <circle cx="256" cy="128" r="67" fill="none" stroke="#d5e5e0" stroke-width="4" />
+  </g>
+  <!-- Dollar Sign Inside Circle -->
+  <path
+    d="M264 68 v14 c16 2 28 11 31 25 l-22 5 c-2-8-9-13-19-13 c-10 0-16 4-16 11 c0 6 5 9 21 13 c23 5 36 13 36 31 c0 16-12 28-31 31 v15 h-16 v-15 c-18-2-32-12-35-29 l22-5 c3 10 11 16 23 16 c11 0 18-5 18-12 c0-7-6-11-22-14 c-22-5-35-13-35-30 c0-15 11-27 29-30 v-13 h16 z"
+    fill="#036654"
+  />
+
+  <!-- Twin Curved Wing / Leaf Arcs ("M" Emblem) -->
+  <g filter="url(#softShadow)">
+    <!-- Left Lower Mint Wing -->
+    <path
+      d="M64 286 C92 222, 186 208, 254 278 C192 246, 126 254, 64 286 Z"
+      fill="url(#mintGrad)"
+    />
+    <!-- Right Lower Mint Wing -->
+    <path
+      d="M448 286 C420 222, 326 208, 258 278 C320 246, 386 254, 448 286 Z"
+      fill="url(#mintGrad)"
+    />
+    <!-- Left & Right Upper White Arch Meeting at Center Point -->
+    <path
+      d="M64 286 C72 194, 198 158, 256 252 C314 158, 440 194, 448 286 C418 214, 314 196, 256 286 C198 196, 94 214, 64 286 Z"
+      fill="url(#whiteMetal)"
+    />
+  </g>
+
+  <!-- Stylized "REX" Wordmark -->
+  <g filter="url(#softShadow)">
+    <!-- R: Mint Diagonal Leg + White Upper Loop & Right Leg -->
+    <polygon points="92,356 130,308 162,308 124,356" fill="url(#mintGrad)" />
+    <path
+      d="M126 284 H196 C216 284 228 294 225 310 C222 324 208 332 190 334 L218 358 H182 L156 334 H144 L162 314 H186 C194 314 198 310 198 305 C198 300 194 298 186 298 H136 L126 284 Z"
+      fill="url(#whiteMetal)"
+    />
+
+    <!-- E: Stylized Italic Block -->
+    <polygon points="242,284 318,284 312,300 264,300 260,313 304,313 299,328 255,328 250,342 302,342 296,358 220,358" fill="url(#whiteMetal)" />
+
+    <!-- X: White Backslash + Mint Forward Slash -->
+    <polygon points="326,284 358,284 422,358 390,358" fill="url(#whiteMetal)" />
+    <polygon points="396,284 428,284 344,358 312,358" fill="url(#mintGrad)" />
+  </g>
+
+  <!-- "— TRADERS —" Subtitle -->
+  <g filter="url(#softShadow)">
+    <polygon points="34,386 106,383 106,389" fill="url(#mintGrad)" />
+    <text
+      x="256"
+      y="398"
+      text-anchor="middle"
+      font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif"
+      font-weight="800"
+      font-size="38"
+      letter-spacing="5"
+      fill="url(#mintGrad)"
+    >
+      TRADERS
+    </text>
+    <polygon points="478,386 406,383 406,389" fill="url(#mintGrad)" />
+  </g>
+</svg>

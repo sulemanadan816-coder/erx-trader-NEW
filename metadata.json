@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix REX TRADERS",
+  "description": "REX TRADERS — Professional trading services, structured service plans, client account portal, and direct support via Telegram and WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
